@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:namer_app/login_page.dart';
+import 'package:namer_app/Configs/themes.dart';
 
 
 void main() {
@@ -12,29 +14,12 @@ class ChatApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chat App',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          appBarTheme: AppBarTheme(color: Colors.blue)),
+        primarySwatch: createMaterialColor(Color(0xFFFFEB3B)),
+      ),// Yellow color
       home: LoginPage(),
     );
   }
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      drawer: Drawer(),
-      floatingActionButton: FloatingActionButton(
-        foregroundColor: Colors.red,
-        onPressed: () {
-          print('Button Clicked !');
-        },
-      ),
-      body: Text('Hello'),
-    );
-  }
-}
 
