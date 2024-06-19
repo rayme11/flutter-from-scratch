@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:namer_app/chat_page.dart';
 import 'package:namer_app/login_page.dart';
 import 'package:namer_app/Configs/themes.dart';
 
@@ -16,7 +17,8 @@ class ChatApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: createMaterialColor(Color(0xFFFFEB3B)),
       ),// Yellow color
-      home: LoginPage(),
+      // home: LoginPage(),
+      home: ChatPage(),
     );
   }
 }
