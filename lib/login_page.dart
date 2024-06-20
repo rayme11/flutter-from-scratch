@@ -1,46 +1,39 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: Drawer(),
-      floatingActionButton: FloatingActionButton(
-        foregroundColor: Colors.red,
-        onPressed: () {
-          print('Button Clicked !');
-        },
-      ),
-      /*   body: Text(
-        'Let\'s sign you in !',
-        style: TextStyle(
-            fontSize: 16,
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            letterSpacing: .5),
-      ),*/
-      body: Column(
-        children: [
-          Center(
-            child: Text(
-              'Welcome back \n ! You\'ve been missed !',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Let\'s sign you in!',
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.brown,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 0.5),
             ),
-          ),
-          Image.network(
-              'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif', height: 200,),
-          Container(
-            height: 100,
-            width: 100,
-            color: Colors.blue,
-            child: FlutterLogo(),
-            padding: EdgeInsets.all(20),
-            margin: EdgeInsets.all(20),
-          )
-        ],
+
+            Text(
+              'Welcome back! \n You\'ve been missed!',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.blueGrey),
+            ),
+            Image.network(
+              'https://3009709.youcanlearnit.net/Alien_LIL_131338.png',
+              height: 200,
+            ),
+          ],
+        ),
       ),
     );
   }
